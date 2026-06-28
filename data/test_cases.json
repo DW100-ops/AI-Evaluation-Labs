@@ -1,32 +1,118 @@
 [
   {
     "id": 1,
-    "category": "Geography",
+    "category": "Factual Accuracy",
     "prompt": "What is the capital of France?",
-    "expected_answer": "Paris is the capital of France."
+    "expected_answer": "Paris is the capital of France.",
+    "evaluation_criteria": {
+      "accuracy": "Must correctly identify Paris as the capital",
+      "completeness": "Should mention France and capital in the response",
+      "hallucination_risk": "Low - factual question with well-established answer"
+    }
   },
   {
     "id": 2,
-    "category": "History",
-    "prompt": "Who invented the light bulb?",
-    "expected_answer": "Thomas Edison invented the light bulb."
+    "category": "Complex Reasoning",
+    "prompt": "Explain why photosynthesis is important for life on Earth.",
+    "expected_answer": "Photosynthesis converts sunlight into chemical energy, producing oxygen and glucose. This is essential because it provides oxygen for respiration and forms the base of most food chains.",
+    "evaluation_criteria": {
+      "accuracy": "Must explain oxygen production and energy conversion",
+      "completeness": "Should connect to life support and food chains",
+      "hallucination_risk": "Medium - requires understanding causal relationships"
+    }
   },
   {
     "id": 3,
-    "category": "Science",
-    "prompt": "What planet is known as the Red Planet?",
-    "expected_answer": "Mars is known as the Red Planet."
+    "category": "Code Generation",
+    "prompt": "Write a Python function that calculates the factorial of a number.",
+    "expected_answer": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+    "evaluation_criteria": {
+      "accuracy": "Function must correctly compute factorial",
+      "completeness": "Should include base case and recursion",
+      "hallucination_risk": "High - LLMs can generate syntactically valid but semantically incorrect code"
+    }
   },
   {
     "id": 4,
-    "category": "Technology",
-    "prompt": "What is Python?",
-    "expected_answer": "Python is a popular programming language."
+    "category": "Summarization",
+    "prompt": "Summarize the industrial revolution in 2-3 sentences.",
+    "expected_answer": "The Industrial Revolution (1760-1840) transformed agrarian economies into industrial manufacturing centers, powered by innovations like the steam engine and textile machinery. It led to urbanization, factory systems, and mass production, dramatically increasing economic output and wealth. However, it also created harsh working conditions and social disruption.",
+    "evaluation_criteria": {
+      "accuracy": "Must identify key technologies and time period",
+      "completeness": "Should cover causes, effects, and major impacts",
+      "conciseness": "Must fit within 2-3 sentences",
+      "hallucination_risk": "Medium - historical interpretation can vary"
+    }
   },
   {
     "id": 5,
-    "category": "Physics",
-    "prompt": "Who developed the theory of relativity?",
-    "expected_answer": "Albert Einstein developed the theory of relativity."
+    "category": "Creative Writing",
+    "prompt": "Write a short creative metaphor about artificial intelligence.",
+    "expected_answer": "Artificial intelligence is like a mirror - it reflects patterns from human knowledge but cannot create fundamentally new understanding.",
+    "evaluation_criteria": {
+      "relevance": "Metaphor should relate to AI characteristics",
+      "creativity": "Should offer unique perspective or comparison",
+      "coherence": "Must be logically consistent",
+      "hallucination_risk": "Low - subjective but verifiable quality"
+    }
+  },
+  {
+    "id": 6,
+    "category": "Multi-hop Reasoning",
+    "prompt": "If all mammals have hearts, and dolphins are mammals, what can we conclude about dolphins?",
+    "expected_answer": "Dolphins have hearts, because they are mammals and all mammals have hearts.",
+    "evaluation_criteria": {
+      "accuracy": "Must apply logical transitivity correctly",
+      "completeness": "Should explicitly state the conclusion",
+      "hallucination_risk": "Low - pure logical reasoning"
+    }
+  },
+  {
+    "id": 7,
+    "category": "Opinion/Subjective",
+    "prompt": "What are the pros and cons of remote work?",
+    "expected_answer": "Pros: flexibility, reduced commute, better work-life balance. Cons: isolation, communication challenges, blurred work-home boundaries.",
+    "evaluation_criteria": {
+      "balance": "Should present multiple perspectives fairly",
+      "completeness": "Should list several pros and cons",
+      "relevance": "Points should be realistic and practical",
+      "hallucination_risk": "Medium - can overstate or invent scenarios"
+    }
+  },
+  {
+    "id": 8,
+    "category": "Technical Definition",
+    "prompt": "Define 'API' and explain why it matters in software development.",
+    "expected_answer": "An API (Application Programming Interface) is a contract that allows different software systems to communicate. It specifies the methods and data formats for requesting services. APIs are crucial because they enable modularity, reusability, and integration of systems.",
+    "evaluation_criteria": {
+      "accuracy": "Definition must be technically correct",
+      "completeness": "Should explain both what and why",
+      "clarity": "Should be understandable to a technical audience",
+      "hallucination_risk": "Low - well-defined technical term"
+    }
+  },
+  {
+    "id": 9,
+    "category": "Open-ended Question",
+    "prompt": "How might climate change impact global food security?",
+    "expected_answer": "Climate change affects food security through: (1) altered precipitation patterns disrupting crop yields, (2) extreme weather events destroying harvests, (3) shifting growing zones, (4) increased pest populations, and (5) rising production costs. Vulnerable populations in developing regions face the greatest risk.",
+    "evaluation_criteria": {
+      "relevance": "Answer must address climate-food security nexus",
+      "depth": "Should explore multiple causal pathways",
+      "evidence_based": "Points should be scientifically grounded",
+      "hallucination_risk": "High - can generate plausible but unverified scenarios"
+    }
+  },
+  {
+    "id": 10,
+    "category": "Instruction Following",
+    "prompt": "Provide three reasons why trees are important, formatted as a numbered list.",
+    "expected_answer": "1. Trees produce oxygen through photosynthesis, essential for respiration.\n2. Trees sequester carbon dioxide, helping mitigate climate change.\n3. Trees provide habitat for wildlife and biodiversity.",
+    "evaluation_criteria": {
+      "format": "Must follow numbered list format exactly",
+      "accuracy": "Reasons must be factually correct",
+      "completeness": "Must provide exactly three reasons",
+      "hallucination_risk": "Low - well-defined format and topic"
+    }
   }
 ]
