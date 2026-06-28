@@ -1,0 +1,2 @@
+# Minimal dependencies for MVP
+# No external libraries needed for basic version

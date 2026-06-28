@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "category": "Geography",
+    "prompt": "What is the capital of France?",
+    "expected_answer": "Paris is the capital of France."
+  },
+  {
+    "id": 2,
+    "category": "History",
+    "prompt": "Who invented the light bulb?",
+    "expected_answer": "Thomas Edison invented the light bulb."
+  },
+  {
+    "id": 3,
+    "category": "Science",
+    "prompt": "What planet is known as the Red Planet?",
+    "expected_answer": "Mars is known as the Red Planet."
+  },
+  {
+    "id": 4,
+    "category": "Technology",
+    "prompt": "What is Python?",
+    "expected_answer": "Python is a popular programming language."
+  },
+  {
+    "id": 5,
+    "category": "Physics",
+    "prompt": "Who developed the theory of relativity?",
+    "expected_answer": "Albert Einstein developed the theory of relativity."
+  }
+]
