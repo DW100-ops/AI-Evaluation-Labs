@@ -1,2 +1,3 @@
 # Minimal dependencies for MVP
-# No external libraries needed for basic version
+# No external libraries needed - uses Python standard library only
+# Python 3.8+
